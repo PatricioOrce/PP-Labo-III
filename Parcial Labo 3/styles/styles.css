@@ -1,0 +1,71 @@
+/* Generar base color griz */
+html, body{
+
+    background-color: rgb(172, 172, 172);
+}
+/* Establecer tamanio por default */
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+div p{
+    background-color: whitesmoke;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Establecer configuracion inicial para todos los <a> */
+a{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 25px;
+}
+/* Generando nav flex */
+#main-nav{
+    display: flex;
+    height: 15rem;
+    width: auto;
+    background: linear-gradient(to left bottom, black, grey, black);
+    justify-content: space-between;
+}
+
+.logo-img{
+    padding: 25px;
+}
+.logo-img:hover{
+    padding: 10px;
+}
+
+#nav-data a{
+    display: flex;
+    color:  grey;
+    margin: 25px;
+
+}
+
+
+#administracion-header{
+    display: flexbox;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 200%;
+}
+
+/* Estableciendo el tamanio de todos los iconos */
+.icon{
+    width: 2rem;
+    height: 2rem;
+}
+#flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width: 1200px){
+    #flex-container{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,88 @@
+:root{
+    --main-anuncio-color: gold;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#icon-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon_text{
+    background-color: var(--main-anuncio-color);
+}
+
+#background-wallpaper{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: var(--main-anuncio-color);
+    border: 1px solid black;
+    margin: 20px;
+    padding: 2rem;
+    max-width: 30%;
+    max-height: 30%;
+}
+.card:hover{
+    transition: 2s;
+    padding: 1rem;
+}
+
+.ver-vehiculo-btn{
+    height: 2rem;
+    background-color: orange;
+}
+.ver-vehiculo-btn:hover{
+    box-shadow: 3px 3px 3px 3px grey;
+    background-color: orange;
+}
+
+.card-item{
+    margin: 5px 10px 5px 10px;
+
+}
+.card-title{
+    text-align: center;
+}
+.card-title::after{
+    content: '"';
+}
+.card-title::before{
+    content: '"';
+}
+
+.card-descript{
+    background-color: var(--main-anuncio-color);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+
+
+
+
+
+.ver-vehiculo-btn{
+    width: 75%;
+}
+
+.card-price{
+    color: greenyellow;
+    font-size: 2.5rem;
+    text-shadow: grey;
+    background-color: var(--main-anuncio-color);
+}
+.card-price::before{
+    content: "$";
+}
