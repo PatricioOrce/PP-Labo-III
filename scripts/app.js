@@ -14,6 +14,7 @@ const anuncios = [
     cantPuertas: 4,
     cantKms: 142826,
     cantPotencia: 370,
+    caracteristicas: ["GNC", "NAFTA"],
   },
   {
     id: 2,
@@ -25,6 +26,7 @@ const anuncios = [
     cantPuertas: 5,
     cantKms: 59883,
     cantPotencia: 379,
+    caracteristicas: ["GNC", "NAFTA"],
   },
   {
     id: 3,
@@ -36,6 +38,7 @@ const anuncios = [
     cantPuertas: 4,
     cantKms: 93871,
     cantPotencia: 236,
+    caracteristicas: ["GNC", "NAFTA"],
   },
   {
     id: 4,
@@ -47,6 +50,7 @@ const anuncios = [
     cantPuertas: 6,
     cantKms: 92317,
     cantPotencia: 224,
+    caracteristicas: ["GNC", "NAFTA"],
   },
   {
     id: 5,
@@ -58,6 +62,7 @@ const anuncios = [
     cantPuertas: 4,
     cantKms: 88378,
     cantPotencia: 397,
+    caracteristicas: ["GNC", "NAFTA"],
   },
   {
     id: 6,
@@ -69,6 +74,7 @@ const anuncios = [
     cantPuertas: 3,
     cantKms: 89075,
     cantPotencia: 141,
+    caracteristicas: ["NAFTA"],
   },
   {
     id: 7,
@@ -80,6 +86,7 @@ const anuncios = [
     cantPuertas: 4,
     cantKms: 8193,
     cantPotencia: 360,
+    caracteristicas: ["GNC"],
   },
   {
     id: 8,
@@ -91,6 +98,7 @@ const anuncios = [
     cantPuertas: 4,
     cantKms: 52079,
     cantPotencia: 292,
+    caracteristicas: ["DIESEL"],
   },
   {
     id: 9,
@@ -102,6 +110,7 @@ const anuncios = [
     cantPuertas: 4,
     cantKms: 62026,
     cantPotencia: 70,
+    caracteristicas: ["GNC", "NAFTA"],
   },
   {
     id: 10,
@@ -113,6 +122,7 @@ const anuncios = [
     cantPuertas: 2,
     cantKms: 69156,
     cantPotencia: 53,
+    caracteristicas: ["NAFTA"],
   },
 ];
 localStorage.setItem("anuncios", JSON.stringify(anuncios));
@@ -127,15 +137,17 @@ const $formulario = document.getElementById("formulario");
 //Genero el evento submit para el formulario.
 $formulario.addEventListener("submit", (e) =>{
     e.preventDefault();
+    var caracteristicas = new Array(document.getElementById("id-gnc-caract").checked ? "GNC" : null,
+                                    document.getElementById("id-nafta-caract").checked ? "NAFTA" : null,
+                                    document.getElementById("id-diesel-caract").checked ? "DIESEL" : null );
+
     //Consigo los datos del formulario y los asigno en las respectivas variables
     const {txtId, titulo, transaccion, description, precio, cantPuertas, cantKms, cantPotencia} = $formulario;
-    const anuncio = new Anuncio_Auto(txtId.value, titulo.value, transaccion.value, description.value, precio.value, cantPuertas.value, cantKms.value, cantPotencia.value)
-    console.log(anuncio);
+    const anuncio = new Anuncio_Auto(txtId.value, titulo.value, transaccion.value, description.value, precio.value,caracteristicas, cantPuertas.value, cantKms.value, cantPotencia.value);
     if(txtId.value === ''){
         Add(anuncio);
     }
     else{
-      console.log("Pene");
         Update(anuncio);
     }
 });
@@ -153,8 +165,9 @@ window.addEventListener("click", (e) => {
       });
       let id = e.target.parentElement.dataset.id;
       const anuncio = newArray.find((anuncio)=>anuncio.id==id);
-
-
+      document.getElementById("id-gnc-caract").checked = false;
+      document.getElementById("id-nafta-caract").checked = false;
+      document.getElementById("id-diesel-caract").checked = false;
       
       const {txtId, titulo, transaccion, description, precio, cantPuertas, cantKms, cantPotencia} = $formulario;
 
@@ -166,10 +179,31 @@ window.addEventListener("click", (e) => {
       cantPuertas.value = anuncio.cantPuertas;
       cantKms.value = anuncio.cantKms;
       cantPotencia.value = anuncio.cantPotencia;
-      
+
+      for (let i = 0; i < 3; i++) {
+
+        if(anuncio.caracteristicas[i] != null && anuncio.caracteristicas[i] != undefined)
+        {
+          switch(anuncio.caracteristicas[i])
+          {
+            case 'GNC':
+              document.getElementById("id-gnc-caract").checked = true;
+              
+              break;
+            case 'NAFTA':
+              document.getElementById("id-nafta-caract").checked = true;
+
+              break;
+              case 'DIESEL':
+                document.getElementById("id-diesel-caract").checked = true;
+
+                break;
+          }
+        }
+        
+      }
     } 
     else if(e.target.matches('#btnEliminar')){
-      // console.log(list.find(x => x.id == $formulario.txtId.value));
       Delete(list.find(x => x.id == $formulario.txtId.value));
     }
 });

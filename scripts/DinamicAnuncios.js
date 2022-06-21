@@ -14,6 +14,7 @@ window.onload = function(){
     
     function AgregarAnuncio(anuncio)
     {
+        console.log(anuncio);
         //Consigo el contenedor
         $container = document.getElementById("container");
         //Creo un contenedor de la card.

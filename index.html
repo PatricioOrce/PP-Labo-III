@@ -23,8 +23,9 @@
             <a href="">Contacto</a>
         </div>
     </nav>
-    <div>
-        <p id="administracion-header"> Administracion </p>
+    <div id="Banner">
+        <h1 id="baner-text administracion-header"> Administracion </h1>
+        <img id="banner-img" src="./imgs/elbanner.jpg" alt="Banner">
     </div>
     <main>
 
@@ -34,35 +35,41 @@
                 <div id="form-data">
                     <section id="form-title-div" class="form-data-field">
                         <label for="title-input" class="title">Titulo</label>
-                        <input id="title-input" class="text-input" name="titulo" type="text" placeholder="Ingrese su titulo!">
+                        <input id="title-input" class="text-input" name="titulo" type="text" placeholder="Ingrese su titulo!" required>
                     </section>
                     <section id="form-transaction-div" class="form-data-field">
                         <label class="title">Transaccion:</label>
                         <div id="radio-trans-options">
-                            <input id="transaccion-venta-input" name="transaccion" value="venta" type="radio">Venta
-                            <input id="transaccion-alquiler-input" name="transaccion" value="alquiler" type="radio">Alquiler
+                            <input id="transaccion-venta-input" name="transaccion" value="venta" type="radio" required>Venta
+                            <input id="transaccion-alquiler-input" name="transaccion" value="alquiler" type="radio" required>Alquiler
                         </div>
+                    </section>
+                    <section id="form-caracteristas-div" class="form-data-field caracteristicas">
+                        <input id="id-gnc-caract" type="checkbox" name="gnc-caract" value="GNC">GNC
+                        <input id="id-nafta-caract" type="checkbox" name="nafta-caract" value="GNC">Nafta
+                        <input id="id-diesel-caract" type="checkbox" name="diesel-caract" value="GNC">Diesel
                     </section>
                     <section id="form-description-div" class="form-data-field">
                         <label id="title-description" class="title">Descripcion:</label>
-                        <input type="text" name="descripcion" id="description" class="text-input" placeholder="Ingrese descripcion.">
+                        <input type="text" name="descripcion" id="description" class="text-input" placeholder="Ingrese descripcion." required>
                     </section>
+                    
                     <section id="form-price-div" class="form-data-field">
                         <label id="title-price" for="precio">Precio:</label>
-                        <input type="number" name="precio" id="precio-input" class="text-input" placeholder="Ingrese precio">
+                        <input type="number" name="precio" id="precio-input" class="text-input" placeholder="Ingrese precio" required>
                     </section>
                     <div id="flex-container">
                         <div>
                             <img class="icon" src="./imgs/puerta-del-auto.png" alt="Puertas:">
-                            <input type="number" name="cantPuertas" id="cant-puertas-input" class="text-input" placeholder="Ingrese cantidad de puertas">
+                            <input type="number" name="cantPuertas" id="cant-puertas-input" class="text-input" placeholder="Ingrese cantidad de puertas" required>
                         </div>
                         <div>
                             <img class="icon" src="./imgs/velocidad-de-descarga.png" alt="Kms:">
-                            <input type="number" name="cantKms" id="cantkms-input" class="text-input" placeholder="Ingrese cantidad de Kms">
+                            <input type="number" name="cantKms" id="cantkms-input" class="text-input" placeholder="Ingrese cantidad de Kms" required>
                         </div>
                         <div>
                             <img class="icon" src="./imgs/potenciar.png" alt="Potencia:">
-                            <input type="number" name="cantPotencia" id="ptencia-input" class="text-input" placeholder="Ingrese potencia del vehiculo ">
+                            <input type="number" name="cantPotencia" id="ptencia-input" class="text-input" placeholder="Ingrese potencia del vehiculo " required>
                         </div>
                     </div>
                 </div>
@@ -93,6 +100,7 @@
 
 
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </body>
 </html>

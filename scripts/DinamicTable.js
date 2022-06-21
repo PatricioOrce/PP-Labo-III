@@ -12,7 +12,6 @@
     }
     function CrearHeader(object)
     {
-        console.log(object);
         const thead = document.createElement("thead");
         const tr = document.createElement("tr");
         thead.classList.add("table-header");
@@ -32,6 +31,8 @@
     }
     function CrearBody(arr)
     {
+        console.log(arr);
+
         if(arr.lenght == 0) {return null};
         const tbody = document.createElement("tbody");
         arr.forEach((element, index) => {
@@ -55,6 +56,7 @@
         return tbody;
     }
     export function Add(object){
+        console.log(JSON.stringify(object));
         var newArray = new Array();
         const list = JSON.parse(localStorage.getItem("anuncios"));
         object.id = getLastId(list) + 1;
@@ -64,6 +66,12 @@
         newArray.push(object);
         localStorage.setItem("anuncios", JSON.stringify(newArray));
         actualizarTabla(newArray);
+        swal({
+            title: "Excelente!",
+            text: "Creaste el anuncio exitosamente!",
+            icon: "success",
+            button: "Aceptar!",
+          });
     }
 
     export function Update(object){
@@ -85,11 +93,35 @@
                     list[index].transaccion = 'alquiler';
 
                 }
+                for (let i = 0; i < count(list[index].caracteristicas); i++) {
+                    if(list[index].caracteristicas[i] != null)
+                    {
+                        switch(list[index].caracteristicas[i])
+                        {
+                            case 'GNC':
+                                list[index].caracteristicas.push('GNC');
+                                break;
+                            case 'NAFTA':
+                                list[index].caracteristicas.push('NAFTA');
+                                break;
+                            case 'DIESEL':
+                                list[index].caracteristicas.push('DIESEL');
+                                break;
+                        }
+                    }
+                    
+                }
             }
         });
         localStorage.setItem("anuncios", JSON.stringify(list));
 
         actualizarTabla(list);
+        swal({
+            title: "Excelente!",
+            text: "Modificaste el anuncio exitosamente!",
+            icon: "success",
+            button: "Aceptar!",
+          });
     }
 
     export function Delete(object){
@@ -100,6 +132,12 @@
         localStorage.setItem("anuncios", JSON.stringify(newArray));
         actualizarTabla();
         Clean();
+        swal({
+            title: "Excelente!",
+            text: "Eliminaste el anuncio exitosamente!",
+            icon: "warning",
+            button: "Aceptar!",
+          });
     }
 
     function getLastId(arr)
