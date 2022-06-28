@@ -155,7 +155,7 @@
         }
     }
 
-    function Clean(){
+    export function Clean(){
         const $formulario = document.getElementById("formulario");
         const {txtId, titulo, transaccion, description, precio, cantPuertas, cantKms, cantPotencia} = $formulario;
 

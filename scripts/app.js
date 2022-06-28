@@ -1,6 +1,6 @@
 import Anuncio from "./Anuncio.js";
 import Anuncio_Auto from "./Anuncio_Auto.js";
-import {CrearTabla, Add, Update, Delete} from "./DinamicTable.js";
+import {CrearTabla, Add, Update, Delete, Clean} from "./DinamicTable.js";
 
 //Inicializo el programa con sus anuncios.
 const anuncios = [
@@ -154,6 +154,8 @@ $formulario.addEventListener("submit", (e) =>{
 
 // const tableCont = document.getElementById("#table-div");
 
+//Aca Manejo los clicks de la pagina.
+
 window.addEventListener("click", (e) => {
   var newArray = new Array();
   const list = JSON.parse(localStorage.getItem("anuncios"));
@@ -206,8 +208,14 @@ window.addEventListener("click", (e) => {
     else if(e.target.matches('#btnEliminar')){
       Delete(list.find(x => x.id == $formulario.txtId.value));
     }
+    else if(e.target.matches('#btnCancelar'))
+    {
+      Clean();
+    }
 });
 
+
+//Genero Spinner y Tabla
 
 const tableDiv = document.getElementById("table-div");
 
@@ -221,7 +229,7 @@ setTimeout(() =>
 
 tableDiv.appendChild(CrearTabla(JSON.parse(localStorage.getItem("anuncios"))));
 
-},5000);
+},2000);
 
 
 function validarDatos()
