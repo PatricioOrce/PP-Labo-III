@@ -2,6 +2,10 @@
     --main-anuncio-color: gold;
 }
 
+body{
+    background-image: url("../imgs/concesionario.jpg");
+}
+
 #container{
     display: flex;
     justify-content: center;
@@ -28,6 +32,7 @@
     align-items: center;
     position: relative;
     background-color: var(--main-anuncio-color);
+    border-radius: 10px;
     border: 1px solid black;
     margin: 20px;
     padding: 2rem;

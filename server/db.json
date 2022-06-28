@@ -1,0 +1,159 @@
+{
+  "anuncios": [
+    {
+      "id": 1,
+      "titulo": "BMW",
+      "transaccion": "venta",
+      "descripcion": "at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum",
+      "precio": 493341,
+      "caracteristicas": [
+        "GNC",
+        "NAFTA"
+      ],
+      "cantPuertas": 4,
+      "cantKms": 142826,
+      "cantPotencia": 370
+    },
+    {
+      "id": 2,
+      "titulo": "Ford",
+      "transaccion": "venta",
+      "descripcion": "orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a",
+      "precio": 704640,
+      "caracteristicas": [
+        "GNC",
+        "NAFTA"
+      ],
+      "cantPuertas": 5,
+      "cantKms": 59883,
+      "cantPotencia": 379
+    },
+    {
+      "id": 3,
+      "titulo": "Ford",
+      "transaccion": "venta",
+      "descripcion": "et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor",
+      "precio": 124597,
+      "caracteristicas": [
+        "GNC",
+        "NAFTA"
+      ],
+      "cantPuertas": 4,
+      "cantKms": 93871,
+      "cantPotencia": 236
+    },
+    {
+      "id": 4,
+      "titulo": "Infiniti",
+      "transaccion": "alquiler",
+      "descripcion": "nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis",
+      "precio": 20248,
+      "caracteristicas": [
+        "GNC",
+        "NAFTA"
+      ],
+      "cantPuertas": 6,
+      "cantKms": 92317,
+      "cantPotencia": 224
+    },
+    {
+      "id": 5,
+      "titulo": "Chevrolet",
+      "transaccion": "venta",
+      "descripcion": "quam sapien varius ut blandit non interdum in ante vestibulum ante",
+      "precio": 761868,
+      "caracteristicas": [
+        "GNC",
+        "NAFTA"
+      ],
+      "cantPuertas": 4,
+      "cantKms": 88378,
+      "cantPotencia": 397
+    },
+    {
+      "id": 6,
+      "titulo": "Lotus",
+      "transaccion": "alquiler",
+      "descripcion": "dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum",
+      "precio": 288219,
+      "caracteristicas": [
+        "NAFTA"
+      ],
+      "cantPuertas": 3,
+      "cantKms": 89075,
+      "cantPotencia": 141
+    },
+    {
+      "id": 7,
+      "titulo": "Mitsubishi",
+      "transaccion": "alquiler",
+      "descripcion": "ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat",
+      "precio": 831141,
+      "caracteristicas": [
+        "GNC"
+      ],
+      "cantPuertas": 4,
+      "cantKms": 8193,
+      "cantPotencia": 360
+    },
+    {
+      "id": 8,
+      "titulo": "Cadillac",
+      "transaccion": "venta",
+      "descripcion": "integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar",
+      "precio": "894597",
+      "caracteristicas": [
+        null,
+        null,
+        "DIESEL"
+      ],
+      "cantPuertas": "4",
+      "cantKms": "52079",
+      "cantPotencia": "292"
+    },
+    {
+      "id": 9,
+      "titulo": "Buick",
+      "transaccion": "alquiler",
+      "descripcion": "amet cursus id turpis integer aliquet massa id lobortis convallis tortor",
+      "precio": 241191,
+      "caracteristicas": [
+        "GNC",
+        "NAFTA"
+      ],
+      "cantPuertas": 4,
+      "cantKms": 62026,
+      "cantPotencia": 70
+    },
+    {
+      "id": 10,
+      "titulo": "Mitsubishis",
+      "transaccion": "alquiler",
+      "descripcion": "ASDegestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget",
+      "precio": "406330",
+      "caracteristicas": [
+        null,
+        "NAFTA",
+        null
+      ],
+      "cantPuertas": "2",
+      "cantKms": "69156",
+      "cantPotencia": "53"
+    },
+    {
+      "id": 11,
+      "titulo": "Fords",
+      "transaccion": "venta",
+      "descripcion": "orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a",
+      "precio": "123444",
+      "caracteristicas": [
+        "GNC",
+        "NAFTA",
+        null
+      ],
+      "cantPuertas": "4",
+      "cantKms": "123333",
+      "cantPotencia": "120"
+    }
+  ]
+}

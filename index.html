@@ -28,7 +28,6 @@
         <img id="banner-img" src="./imgs/elbanner.jpg" alt="Banner">
     </div>
     <main>
-
         <div id="form-div" class="main-div">
             <form id="formulario">
                 <input type="text" name="txtId" hidden>
@@ -83,22 +82,66 @@
                 </div>
             </form>
         </div>
+
+        <section id="new-features-container">
+            <div id="checkbox-container">
+                <input type="checkbox" value="0" class="checkbox-header-item" name="mostrarTitulo" checked/>Titulo
+                <input type="checkbox" value="1" class="checkbox-header-item" name="mostrarTipo"  checked/>Transaccion
+                <input type="checkbox" value="2" class="checkbox-header-item" name="mostrarDescripcion"  checked/>Descripcion
+                <input type="checkbox" value="3" class="checkbox-header-item" name="mostrarPrecio"  checked/>Precio
+                <input type="checkbox" value="4" class="checkbox-header-item" name="mostrarPrecio"  checked/>Caracteristicas
+                <input type="checkbox" value="5" class="checkbox-header-item" name="mostrarPuertas"  checked/>Puertas
+                <input type="checkbox" value="6" class="checkbox-header-item" name="mostrarKilometros" checked/>Kilometros
+                <input type="checkbox" value="7" class="checkbox-header-item" name="mostrarPotencia" checked/>Potencia
+            </div>
+            <div id="filter-container">
+                <select id="cmbx-filter-options">
+                    <option value="Todos" selected >Todos</option>
+                    <option value="Venta">Venta</option>
+                    <option value="Alquiler">Alquiler</option>
+                </select>
+                <input id="BtnFiltrar" class="BtnFiltrar" type="button" name="AccionFiltrarPublicacion" value="Filtrar">
+               <input id="filtered-info-input" readonly placeholder="Promedio">
+            </div>
+        </section>
+
+
         <div class="spinner" id="divSpinner">
-            <label class="labelForm">Cargando data... Aguarde por favor...</label> 
             <img id="spinner" src="./imgs/spinner.gif" alt="spinner">
         </div>
         <section id="table-div">
                     
         </section>
-        <!-- <div id="table-div" class="main-div">
-    
-          
-    
-    
-        </div> -->
     </main>
 
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Grid container -->
 
+        <!-- Copyright -->
+        <div class="text-center p-3 " style="background-color: rgba(0, 0, 0, 0.2);">
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <div class="miclas">
+                    <ul class="list-unstyled">
+                        <li>
+                          <a href="#!" class="text-dark">Nosotros</a>
+                        </li>
+                        <li>
+                          <a href="#!" class="text-dark">Anuncios</a>
+                        </li>
+                        <li>
+                          <a href="#!" class="text-dark">Contacto</a>
+                        </li>
+                        <li>
+                          <a href="#!" class="text-dark"> Blog</a>
+                        </li>
+                      </ul>
+                </div>
+              </div>
+          © 2022 Copyright:
+          <a class="text-dark" href="#">PedazoDeAutasos.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 

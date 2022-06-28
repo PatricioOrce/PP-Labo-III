@@ -69,3 +69,8 @@ a{
         flex-direction: column;
     }
 }
+
+.miclas{
+    background-color: red;
+    display: inline;
+}
